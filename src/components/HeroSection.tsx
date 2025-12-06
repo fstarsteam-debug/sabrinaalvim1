@@ -1,21 +1,20 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 import sabrinaPhoto from "@/assets/sabrina-photo.png";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }}>
         <div className="absolute inset-0 bg-background/80" />
       </div>
       
       {/* Animated Glow Effects */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[150px] animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/20 rounded-full blur-[120px] animate-pulse" style={{
+      animationDelay: "1s"
+    }} />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -23,11 +22,7 @@ const HeroSection = () => {
           {/* Profile Photo */}
           <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8">
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-50 animate-pulse" />
-            <img 
-              src={sabrinaPhoto} 
-              alt="Sabrina Alvim" 
-              className="relative w-full h-full object-cover object-top rounded-full border-4 border-primary/30"
-            />
+            <img src={sabrinaPhoto} alt="Sabrina Alvim" className="relative w-full h-full object-cover object-top border-primary/30 border-8 rounded-2xl" />
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
@@ -43,20 +38,12 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button 
-              variant="hero" 
-              size="xl"
-              asChild
-            >
+            <Button variant="hero" size="xl" asChild>
               <a href="http://wa.me/31994216833" target="_blank" rel="noopener noreferrer">
                 Solicitar Orçamento
               </a>
             </Button>
-            <Button 
-              variant="heroOutline" 
-              size="xl"
-              asChild
-            >
+            <Button variant="heroOutline" size="xl" asChild>
               <a href="#sobre">
                 Sobre Mim
               </a>
@@ -71,8 +58,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
