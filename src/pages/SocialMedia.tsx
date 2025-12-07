@@ -1,42 +1,42 @@
 import PageLayout from "@/components/PageLayout";
 import { ExternalLink, Instagram } from "lucide-react";
+import premierLogo from "@/assets/clients/premier.png";
+import motoshopLogo from "@/assets/clients/motoshop.png";
+import v1Logo from "@/assets/clients/v1pagamentos.png";
+import falcaoLogo from "@/assets/clients/comercialfalcao.png";
+import thamaraLogo from "@/assets/clients/drathamara.png";
+import pizzariaLogo from "@/assets/clients/pizzariabaiano.png";
 
 const clients = [
   { 
     name: "Premier Atacadista", 
-    logo: "https://images.unsplash.com/photo-1560472355-536de3962603?w=200&h=200&fit=crop&auto=format",
-    instagram: "https://www.instagram.com/premieratacadista",
-    color: "from-orange-500 to-red-500"
+    logo: premierLogo,
+    instagram: "https://www.instagram.com/premieratacadista"
   },
   { 
     name: "Motoshop Show Service", 
-    logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop&auto=format",
-    instagram: "https://www.instagram.com/motoshopshowservice",
-    color: "from-blue-500 to-cyan-500"
+    logo: motoshopLogo,
+    instagram: "https://www.instagram.com/motoshopshowservice"
   },
   { 
     name: "V1 Pagamentos", 
-    logo: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&h=200&fit=crop&auto=format",
-    instagram: "https://www.instagram.com/v1pagamentos",
-    color: "from-green-500 to-emerald-500"
+    logo: v1Logo,
+    instagram: "https://www.instagram.com/v1pagamentos"
   },
   { 
     name: "Comercial Falcão", 
-    logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=200&fit=crop&auto=format",
-    instagram: "https://www.instagram.com/comercial.falcao.centro",
-    color: "from-amber-500 to-yellow-500"
+    logo: falcaoLogo,
+    instagram: "https://www.instagram.com/comercial.falcao.centro"
   },
   { 
     name: "Dra. Thamara Gomes", 
-    logo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&auto=format",
-    instagram: "https://www.instagram.com/dra.thamaragomes",
-    color: "from-pink-500 to-rose-500"
+    logo: thamaraLogo,
+    instagram: "https://www.instagram.com/dra.thamaragomes"
   },
   { 
     name: "Pizzaria do Baiano", 
-    logo: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200&h=200&fit=crop&auto=format",
-    instagram: "https://www.instagram.com/pizzaria_do_baiano1",
-    color: "from-purple-500 to-violet-500"
+    logo: pizzariaLogo,
+    instagram: "https://www.instagram.com/pizzaria_do_baiano1"
   },
 ];
 
@@ -65,7 +65,7 @@ const SocialMedia = () => {
         </div>
       </div>
 
-      {/* Services */}
+      {/* Services - Purple animated cards */}
       <div className="mb-20">
         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-10 text-center">
           O que está <span className="text-gradient">incluso</span>
@@ -81,16 +81,17 @@ const SocialMedia = () => {
           ].map((service, index) => (
             <div 
               key={index} 
-              className="group p-6 bg-card/50 rounded-2xl border border-border/50 hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(162,89,255,0.2)]"
+              className="group p-6 bg-primary/5 rounded-2xl border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(162,89,255,0.3)] cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <span className="text-3xl mb-3 block">{service.icon}</span>
-              <p className="text-foreground font-medium">{service.text}</p>
+              <span className="text-3xl mb-3 block group-hover:scale-125 transition-transform duration-300">{service.icon}</span>
+              <p className="text-foreground font-medium group-hover:text-primary transition-colors">{service.text}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Clients */}
+      {/* Clients - Bigger logos with animations */}
       <div>
         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-center">
           Alguns Perfis que <span className="text-gradient">Gerencio</span>
@@ -104,40 +105,30 @@ const SocialMedia = () => {
               href={client.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col items-center p-8 bg-card/50 rounded-3xl border border-border/50 hover:border-transparent transition-all duration-500 hover:scale-105 overflow-hidden"
+              className="group relative flex flex-col items-center p-8 bg-primary/5 rounded-3xl border-2 border-primary/30 hover:border-primary transition-all duration-500 hover:scale-105 overflow-hidden hover:shadow-[0_0_60px_rgba(162,89,255,0.4)]"
             >
-              {/* Gradient Border Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${client.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              <div className="absolute inset-[2px] bg-card rounded-[22px] z-10" />
+              {/* Animated Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              {/* Glow Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${client.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500`} />
+              {/* Logo Container - Bigger */}
+              <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden mb-6 bg-card border-2 border-primary/20 group-hover:border-primary transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(162,89,255,0.5)]">
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               
-              {/* Content */}
-              <div className="relative z-20 flex flex-col items-center">
-                {/* Logo Container */}
-                <div className={`relative w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-border group-hover:border-transparent transition-colors duration-300`}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${client.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  <div className="absolute inset-[3px] rounded-full overflow-hidden bg-card">
-                    <img 
-                      src={client.logo} 
-                      alt={client.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-                
-                {/* Name */}
-                <p className="text-lg font-bold text-center group-hover:text-primary transition-colors duration-300 mb-3">
-                  {client.name}
-                </p>
-                
-                {/* Instagram Badge */}
-                <div className={`flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${client.color} opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0`}>
-                  <Instagram className="w-4 h-4 text-white" />
-                  <span className="text-white text-sm font-medium">Ver Instagram</span>
-                  <ExternalLink className="w-3 h-3 text-white" />
-                </div>
+              {/* Name */}
+              <p className="relative z-10 text-lg font-bold text-center group-hover:text-primary transition-colors duration-300 mb-4">
+                {client.name}
+              </p>
+              
+              {/* Instagram Badge */}
+              <div className="relative z-10 flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/20 border border-primary/50 group-hover:bg-primary group-hover:border-primary transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <Instagram className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
+                <span className="text-primary group-hover:text-primary-foreground text-sm font-medium transition-colors">Ver Instagram</span>
+                <ExternalLink className="w-3 h-3 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
             </a>
           ))}

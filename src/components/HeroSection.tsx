@@ -16,13 +16,13 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto animate-slide-up">
           {/* Photo + Name Side by Side */}
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-12">
-            {/* Profile Photo - Larger */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 flex-shrink-0">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-xl opacity-40 animate-pulse" />
+            {/* Profile Photo - Larger, No Border */}
+            <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] flex-shrink-0">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 rounded-2xl blur-3xl opacity-50 animate-pulse" />
               <img 
                 src={sabrinaPhoto} 
                 alt="Sabrina Alvim" 
-                className="relative w-full h-full object-cover object-top border-primary/30 border-8 rounded-2xl" 
+                className="relative w-full h-full object-cover object-top rounded-2xl" 
               />
             </div>
             

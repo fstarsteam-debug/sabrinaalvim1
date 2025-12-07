@@ -1,18 +1,17 @@
 import PageLayout from "@/components/PageLayout";
-import pizza1 from "@/assets/portfolio/pizza1.png";
-import pizza2 from "@/assets/portfolio/pizza2.png";
-import pizza3 from "@/assets/portfolio/pizza3.png";
-import pizza4 from "@/assets/portfolio/pizza4.png";
-import burger1 from "@/assets/portfolio/burger1.png";
-import burger2 from "@/assets/portfolio/burger2.png";
+import embalagem1 from "@/assets/embalagem/embalagem1.png";
+import embalagem2 from "@/assets/embalagem/embalagem2.png";
+import embalagem3 from "@/assets/embalagem/embalagem3.png";
+import embalagem4 from "@/assets/embalagem/embalagem4.png";
+import embalagem5 from "@/assets/embalagem/embalagem5.png";
 
 const works = [
-  { id: 1, image: pizza1, title: "Embalagem Pizza Premium" },
-  { id: 2, image: pizza2, title: "Caixa Personalizada" },
-  { id: 3, image: burger1, title: "Embalagem Burger" },
-  { id: 4, image: pizza3, title: "Design de Caixa" },
-  { id: 5, image: pizza4, title: "Embalagem Artesanal" },
-  { id: 6, image: burger2, title: "Packaging Gourmet" },
+  { id: 1, image: embalagem1, title: "Embalagem Premium" },
+  { id: 2, image: embalagem2, title: "Caixa Personalizada" },
+  { id: 3, image: embalagem3, title: "Design de Embalagem" },
+  { id: 4, image: embalagem4, title: "Packaging Gourmet" },
+  { id: 5, image: embalagem5, title: "Embalagem Artesanal" },
+  { id: 6, image: embalagem1, title: "Packaging Exclusivo" },
 ];
 
 const Embalagem = () => {

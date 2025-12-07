@@ -8,6 +8,7 @@ import {
   Package, 
   Printer, 
   MessageSquare,
+  Megaphone,
   ArrowRight
 } from "lucide-react";
 
@@ -53,6 +54,12 @@ const services = [
     title: "Consultoria de Branding",
     description: "Orientação estratégica para fortalecer sua marca.",
     link: "/branding"
+  },
+  {
+    icon: Megaphone,
+    title: "Tráfego Pago",
+    description: "Campanhas de anúncios que geram resultados reais.",
+    link: "/trafego-pago"
   },
 ];
 
