@@ -1,53 +1,60 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 import sabrinaPhoto from "@/assets/sabrina-photo.png";
+
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBg})`
-    }}>
-        <div className="absolute inset-0 bg-background/80" />
-      </div>
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Subtle Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
       
       {/* Animated Glow Effects */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[150px] animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/20 rounded-full blur-[120px] animate-pulse" style={{
-      animationDelay: "1s"
-    }} />
+      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[150px] animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-slide-up">
-          {/* Profile Photo */}
-          <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-50 animate-pulse" />
-            <img src={sabrinaPhoto} alt="Sabrina Alvim" className="relative w-full h-full object-cover object-top border-primary/30 border-8 rounded-2xl" />
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
-            <span className="text-foreground">Sabrina Alvim</span>
-            <br />
-            <span className="text-gradient text-2xl md:text-3xl lg:text-4xl">Graphic Designer</span>
-            <br />
-            <span className="text-foreground text-2xl md:text-3xl lg:text-4xl">& Social Media Specialist</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-            Transformando marcas com design, estratégia e criatividade que convertem.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button variant="hero" size="xl" asChild>
-              <a href="http://wa.me/31994216833" target="_blank" rel="noopener noreferrer">
-                Solicitar Orçamento
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a href="#sobre">
-                Sobre Mim
-              </a>
-            </Button>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="max-w-6xl mx-auto animate-slide-up">
+          {/* Photo + Name Side by Side */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-12">
+            {/* Profile Photo - Larger */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 flex-shrink-0">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-xl opacity-40 animate-pulse" />
+              <img 
+                src={sabrinaPhoto} 
+                alt="Sabrina Alvim" 
+                className="relative w-full h-full object-cover object-top border-primary/30 border-8 rounded-2xl" 
+              />
+            </div>
+            
+            {/* Name and Title */}
+            <div className="text-center lg:text-left space-y-4">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
+                <span className="text-foreground">Sabrina Alvim</span>
+              </h1>
+              <p className="text-gradient text-2xl md:text-3xl lg:text-4xl font-heading font-semibold">
+                Graphic Designer
+              </p>
+              <p className="text-foreground text-xl md:text-2xl lg:text-3xl">
+                & Social Media Specialist
+              </p>
+              
+              <p className="text-lg md:text-xl text-muted-foreground max-w-lg font-light pt-4">
+                Transformando marcas com design, estratégia e criatividade que convertem.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <Button variant="hero" size="xl" asChild>
+                  <a href="http://wa.me/31994216833" target="_blank" rel="noopener noreferrer">
+                    Solicitar Orçamento
+                  </a>
+                </Button>
+                <Button variant="heroOutline" size="xl" asChild>
+                  <a href="#sobre">
+                    Sobre Mim
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -58,6 +65,8 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

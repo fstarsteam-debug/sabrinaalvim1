@@ -2,11 +2,11 @@ import { Palette, Target, Sparkles, TrendingUp, Award } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
-    { icon: Award, text: "Mais de 17 anos criando identidade visual", color: "from-purple-500 to-pink-500" },
-    { icon: Target, text: "Especialista em redes sociais para pequenas empresas", color: "from-blue-500 to-cyan-500" },
-    { icon: Sparkles, text: "Foco em estética moderna, limpa e profissional", color: "from-amber-500 to-orange-500" },
-    { icon: Palette, text: "Capacidade de transformar ideias em marcas fortes", color: "from-green-500 to-emerald-500" },
-    { icon: TrendingUp, text: "Domínio de design estratégico orientado a vendas", color: "from-red-500 to-rose-500" },
+    { icon: Award, text: "Mais de 17 anos criando identidade visual" },
+    { icon: Target, text: "Especialista em redes sociais para pequenas empresas" },
+    { icon: Sparkles, text: "Foco em estética moderna, limpa e profissional" },
+    { icon: Palette, text: "Capacidade de transformar ideias em marcas fortes" },
+    { icon: TrendingUp, text: "Domínio de design estratégico orientado a vendas" },
   ];
 
   return (
@@ -28,17 +28,15 @@ const AboutSection = () => {
             {highlights.map((item, index) => (
               <div 
                 key={index}
-                className="group relative p-6 bg-card/50 rounded-2xl border border-border/50 hover:border-primary transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(162,89,255,0.3)]"
+                className="group relative p-6 bg-card/50 rounded-2xl border border-border/50 hover:border-primary transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(162,89,255,0.4)]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`} />
+                {/* Purple Gradient Background on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500" />
                 
                 {/* Icon */}
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${item.color} p-[2px] group-hover:shadow-lg transition-shadow duration-300`}>
-                  <div className="w-full h-full bg-card rounded-[10px] flex items-center justify-center">
-                    <item.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                  </div>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-primary/20 border border-primary/30 group-hover:bg-primary/30 group-hover:border-primary transition-all duration-300 flex items-center justify-center">
+                  <item.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 
                 {/* Text */}
