@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design para Impressos - Materiais gráficos profissionais que transmitem credibilidade por Sabrina Alvim.">
+  <title>Design para Impressos | Sabrina Alvim</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-glow-1"></div>
+      <div class="page-header-glow-2"></div>
+      
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          Voltar para Home
+        </a>
+        
+        <h1 class="page-title"><span class="text-gradient">Design para Impressos</span></h1>
+        <p class="page-subtitle">Materiais gráficos profissionais que transmitem credibilidade.</p>
+      </div>
+    </section>
+    
+    <!-- Content -->
+    <section class="page-content">
+      <div class="container">
+        <!-- Stats -->
+        <div class="stats-row" style="margin-bottom: 4rem;">
+          <div class="stat-card">
+            <p class="value text-gradient">+500</p>
+            <p class="label">Materiais Criados</p>
+          </div>
+          <div class="stat-card">
+            <p class="value text-gradient">100+</p>
+            <p class="label">Empresas Atendidas</p>
+          </div>
+          <div class="stat-card">
+            <p class="value text-gradient">CMYK</p>
+            <p class="label">Print Ready</p>
+          </div>
+        </div>
+        
+        <!-- Services -->
+        <div style="margin-bottom: 4rem;">
+          <h2 style="font-size: 1.5rem; margin-bottom: 2rem;">Tipos de Materiais</h2>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Cartões de Visita</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Folders e Flyers</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Banners e Faixas</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Catálogos</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Cardápios</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Papelaria Completa</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Convites</p>
+            </div>
+            <div class="benefit-card" style="text-align: center;">
+              <p style="font-weight: 500;">Etiquetas e Tags</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Works -->
+        <div style="margin-bottom: 5rem;">
+          <h2 style="font-size: 1.5rem; margin-bottom: 2rem;">Meus Trabalhos</h2>
+          <div class="works-grid">
+            <div class="work-card">
+              <img src="assets/impressos/impresso1.png" alt="Folder Institucional">
+              <div class="work-overlay"></div>
+              <span class="work-label">Folder Institucional</span>
+            </div>
+            <div class="work-card">
+              <img src="assets/impressos/impresso2.png" alt="Cartões de Visita">
+              <div class="work-overlay"></div>
+              <span class="work-label">Cartões de Visita</span>
+            </div>
+            <div class="work-card">
+              <img src="assets/impressos/impresso3.png" alt="Banner Promocional">
+              <div class="work-overlay"></div>
+              <span class="work-label">Banner Promocional</span>
+            </div>
+            <div class="work-card">
+              <img src="assets/impressos/impresso4.png" alt="Flyers e Panfletos">
+              <div class="work-overlay"></div>
+              <span class="work-label">Flyers e Panfletos</span>
+            </div>
+            <div class="work-card">
+              <img src="assets/impressos/impresso5.png" alt="Catálogo de Produtos">
+              <div class="work-overlay"></div>
+              <span class="work-label">Catálogo de Produtos</span>
+            </div>
+            <div class="work-card">
+              <img src="assets/impressos/impresso1.png" alt="Papelaria Completa">
+              <div class="work-overlay"></div>
+              <span class="work-label">Papelaria Completa</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Quote Form -->
+        <div class="form-container">
+          <div class="form-glow"></div>
+          <h2 class="form-title">
+            Solicitar <span class="text-gradient">Orçamento</span>
+          </h2>
+          
+          <form id="quote-form" style="max-width: 42rem; margin: 0 auto;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="whatsapp">WhatsApp *</label>
+                <input type="text" id="whatsapp" name="whatsapp" class="form-input" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            
+            <input type="hidden" id="servico" name="servico" value="">
+            <input type="hidden" id="cardModel" name="cardModel" value="">
+            <input type="hidden" id="cardQuantity" name="cardQuantity" value="">
+            <input type="hidden" id="panfletoQuantity" name="panfletoQuantity" value="">
+            <input type="hidden" id="adesivosQuantity" name="adesivosQuantity" value="">
+            <input type="hidden" id="adesivosType" name="adesivosType" value="">
+            
+            <div class="form-group">
+              <label class="form-label">Selecione o serviço *</label>
+              <div class="service-options">
+                <div class="service-option" data-service="cartao">
+                  <span>Cartão de visitas</span>
+                </div>
+                <div class="service-option" data-service="banner">
+                  <span>Banner</span>
+                </div>
+                <div class="service-option" data-service="windbanner">
+                  <span>Wind banner</span>
+                </div>
+                <div class="service-option" data-service="panfletos">
+                  <span>Panfletos</span>
+                </div>
+                <div class="service-option" data-service="adesivos">
+                  <span>Adesivos</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Cartão de visitas options -->
+            <div id="section-cartao" class="conditional-section" style="display: none;">
+              <div class="form-group">
+                <label class="form-label">Modelo do cartão</label>
+                <div class="option-group" data-input="cardModel">
+                  <div class="option-grid cols-2">
+                    <div class="option-item" data-value="Cartão somente frente">
+                      <span>Cartão somente frente</span>
+                    </div>
+                    <div class="option-item" data-value="Cartão frente verniz total e verso preto e branco">
+                      <span>Cartão frente verniz total e verso preto e branco</span>
+                    </div>
+                    <div class="option-item" data-value="Cartão frente verniz total e verso colorido">
+                      <span>Cartão frente verniz total e verso colorido</span>
+                    </div>
+                    <div class="option-item" data-value="Cartão verniz localizado">
+                      <span>Cartão verniz localizado</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Quantidade</label>
+                <div class="option-group" data-input="cardQuantity">
+                  <div class="option-grid cols-4">
+                    <div class="option-item" data-value="250un">
+                      <span>250un</span>
+                    </div>
+                    <div class="option-item" data-value="500un">
+                      <span>500un</span>
+                    </div>
+                    <div class="option-item" data-value="1000un">
+                      <span>1000un</span>
+                    </div>
+                    <div class="option-item" data-value="2500un ou mais">
+                      <span>2500un ou mais</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Banner options -->
+            <div id="section-banner" class="conditional-section" style="display: none;">
+              <div class="form-group">
+                <label class="form-label" for="bannerSize">Tamanho do banner</label>
+                <input type="text" id="bannerSize" name="bannerSize" class="form-input" placeholder="Ex: 1m x 2m">
+              </div>
+            </div>
+            
+            <!-- Panfletos options -->
+            <div id="section-panfletos" class="conditional-section" style="display: none;">
+              <div class="form-group">
+                <label class="form-label">Quantidade</label>
+                <div class="option-group" data-input="panfletoQuantity">
+                  <div class="option-grid cols-4">
+                    <div class="option-item" data-value="250un">
+                      <span>250un</span>
+                    </div>
+                    <div class="option-item" data-value="500un">
+                      <span>500un</span>
+                    </div>
+                    <div class="option-item" data-value="1000un">
+                      <span>1000un</span>
+                    </div>
+                    <div class="option-item" data-value="2500un ou mais">
+                      <span>2500un ou mais</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="panfletoCustomQuantity">Ou digite a quantidade desejada</label>
+                <input type="text" id="panfletoCustomQuantity" name="panfletoCustomQuantity" class="form-input" placeholder="Ex: 3000 unidades">
+              </div>
+            </div>
+            
+            <!-- Adesivos options -->
+            <div id="section-adesivos" class="conditional-section" style="display: none;">
+              <div class="form-group">
+                <label class="form-label">Quantidade</label>
+                <div class="option-group" data-input="adesivosQuantity">
+                  <div class="option-grid cols-4">
+                    <div class="option-item" data-value="250un">
+                      <span>250un</span>
+                    </div>
+                    <div class="option-item" data-value="500un">
+                      <span>500un</span>
+                    </div>
+                    <div class="option-item" data-value="1000un">
+                      <span>1000un</span>
+                    </div>
+                    <div class="option-item" data-value="2500un ou mais">
+                      <span>2500un ou mais</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="adesivosSize">Tamanho</label>
+                <input type="text" id="adesivosSize" name="adesivosSize" class="form-input" placeholder="Ex: 5cm x 5cm">
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Tipo de adesivo</label>
+                <div class="option-group" data-input="adesivosType">
+                  <div class="option-grid cols-2">
+                    <div class="option-item" data-value="Adesivo de papel">
+                      <span>Adesivo de papel</span>
+                    </div>
+                    <div class="option-item" data-value="Adesivo de vinil à prova d'água">
+                      <span>Adesivo de vinil à prova d'água</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-neon" style="width: 100%; margin-top: 1.5rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              Enviar Orçamento via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Page CTA -->
+    <section class="page-cta">
+      <div class="container">
+        <h2>Gostou? Vamos <span class="text-gradient">conversar!</span></h2>
+        <a href="https://wa.me/31994216833" target="_blank" rel="noopener noreferrer" class="btn btn-hero">
+          Solicitar Orçamento
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-glow"></div>
+      
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="text-gradient">Sabrina Alvim</h3>
+            <p>Designer Gráfica & Especialista em Mídias Sociais</p>
+          </div>
+          
+          <div>
+            <h4 class="footer-title">Links Úteis</h4>
+            <nav class="footer-links">
+              <a href="index.html#servicos">Serviços</a>
+              <a href="index.html#portfolio">Portfólio</a>
+              <a href="https://wa.me/31994216833" target="_blank">Contato</a>
+            </nav>
+          </div>
+          
+          <div>
+            <h4 class="footer-title">Contato</h4>
+            <div class="footer-contact">
+              <a href="mailto:sealdesignn@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                sealdesignn@gmail.com
+              </a>
+            </div>
+            
+            <div class="footer-social">
+              <a href="https://instagram.com/sabrinaalvimdesign" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="https://wa.me/31994216833" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Sabrina Alvim. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
