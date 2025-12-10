@@ -36,7 +36,7 @@ name: FTP-Deploy to Locaweb
 
         password: ${{ secrets.PASS }}
 
-        server-dir: public/
+        server-dir: public_html/
 
         local-dir: html-version/ 
 
