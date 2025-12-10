@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lock, Check, Instagram, Video, Calendar, Image, Users, MessageSquare, TrendingUp, Sparkles } from "lucide-react";
+import { Lock, Check, Instagram, Video, Calendar, Image, Users, MessageSquare, TrendingUp, Sparkles, MapPin, Bot, CreditCard, FileText, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,9 +11,11 @@ const packages = [
   {
     name: "Pacote Básico",
     subtitle: "Ideal para começar",
+    price: "R$ 800",
     color: "from-purple-600 to-purple-800",
     reels: 2,
     posts: 8,
+    stories: null,
     features: [
       {
         icon: Video,
@@ -36,6 +38,11 @@ const packages = [
         description: "Planejamento estratégico, calendário editorial, agendamento de publicações e análise de métricas"
       },
       {
+        icon: Bot,
+        title: "Bot de Direcionamento Instagram",
+        description: "Automação inteligente para captação de clientes e direcionamento para funil de vendas no WhatsApp"
+      },
+      {
         icon: MessageSquare,
         title: "Suporte via WhatsApp",
         description: "Atendimento para dúvidas e alinhamentos sobre o conteúdo"
@@ -45,10 +52,12 @@ const packages = [
   {
     name: "Pacote Iniciante",
     subtitle: "O mais escolhido",
+    price: "R$ 1.000",
     color: "from-primary to-purple-600",
     popular: true,
     reels: 3,
     posts: 10,
+    stories: 15,
     features: [
       {
         icon: Video,
@@ -61,6 +70,11 @@ const packages = [
         description: "Artes personalizadas para feed ou fotos tratadas de produtos, incluindo carrosséis educativos e promocionais"
       },
       {
+        icon: Calendar,
+        title: "15 Stories por mês",
+        description: "Stories criativos e engajadores para manter sua audiência conectada diariamente"
+      },
+      {
         icon: Sparkles,
         title: "Bônus Sazonal",
         description: "Conteúdos extras para datas especiais + Stories temáticos para aumentar o engajamento"
@@ -69,6 +83,16 @@ const packages = [
         icon: Users,
         title: "Gerenciamento de Redes Sociais",
         description: "Estratégia completa: planejamento, criação de calendário, postagens programadas, hashtags otimizadas e relatório mensal"
+      },
+      {
+        icon: MapPin,
+        title: "Gerenciamento Google Meu Negócio",
+        description: "Otimização e gestão do seu perfil no Google para aumentar sua visibilidade nas buscas locais"
+      },
+      {
+        icon: Bot,
+        title: "Bot de Direcionamento Instagram",
+        description: "Automação inteligente para captação de clientes e direcionamento para funil de vendas no WhatsApp"
       },
       {
         icon: TrendingUp,
@@ -85,9 +109,11 @@ const packages = [
   {
     name: "Pacote Premium Plus",
     subtitle: "Máximo resultado",
+    price: "R$ 1.200",
     color: "from-amber-500 to-orange-600",
     reels: 4,
     posts: 12,
+    stories: 20,
     features: [
       {
         icon: Video,
@@ -97,7 +123,12 @@ const packages = [
       {
         icon: Image,
         title: "12 Posts ou Fotos de Produtos",
-        description: "Conteúdo visual premium incluindo carrosséis, posts estáticos, fotos de produtos com tratamento profissional e artes para stories"
+        description: "Conteúdo visual premium incluindo carrosséis, posts estáticos, fotos de produtos com tratamento profissional"
+      },
+      {
+        icon: Calendar,
+        title: "20 Stories por mês",
+        description: "Stories estratégicos com enquetes, caixas de perguntas e conteúdos interativos para máximo engajamento"
       },
       {
         icon: Sparkles,
@@ -108,6 +139,16 @@ const packages = [
         icon: Users,
         title: "Gerenciamento Premium de Redes",
         description: "Gestão 360°: estratégia avançada, calendário editorial detalhado, otimização de horários, hashtags pesquisadas, interação com seguidores e relatórios completos"
+      },
+      {
+        icon: MapPin,
+        title: "Gerenciamento Google Meu Negócio",
+        description: "Gestão completa do Google Meu Negócio com postagens, respostas a avaliações e otimização de SEO local"
+      },
+      {
+        icon: Bot,
+        title: "Bot de Direcionamento Instagram",
+        description: "Automação inteligente para captação de clientes e direcionamento para funil de vendas no WhatsApp"
       },
       {
         icon: TrendingUp,
@@ -140,9 +181,9 @@ const Orcamento = () => {
 
   const handleWhatsApp = (packageName: string) => {
     const message = encodeURIComponent(
-      `Olá Sabrina! Tenho interesse no ${packageName}. Gostaria de mais informações sobre valores e como podemos começar!`
+      `Olá Sabrina! Tenho interesse no ${packageName}. Gostaria de mais informações!`
     );
-    window.open(`https://wa.me/5531994216833?text=${message}`, "_blank");
+    window.open(`https://wa.me/31994216833?text=${message}`, "_blank");
   };
 
   if (!isAuthenticated) {
@@ -195,7 +236,7 @@ const Orcamento = () => {
           </p>
           <div className="flex items-center justify-center gap-2 mt-6 text-primary">
             <Instagram className="w-6 h-6" />
-            <span className="text-lg font-medium">@sealdesignn</span>
+            <span className="text-lg font-medium">@sabrinaalvim.designer</span>
           </div>
         </div>
       </section>
@@ -226,15 +267,27 @@ const Orcamento = () => {
                   <CardTitle className="text-2xl text-foreground">{pkg.name}</CardTitle>
                   <p className="text-muted-foreground">{pkg.subtitle}</p>
                   
-                  <div className="flex justify-center gap-6 mt-4 py-4 border-y border-primary/20">
+                  {/* Price */}
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold text-primary">{pkg.price}</span>
+                    <span className="text-muted-foreground">/mês</span>
+                  </div>
+                  
+                  <div className="flex justify-center gap-4 mt-4 py-4 border-y border-primary/20 flex-wrap">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{pkg.reels}</div>
-                      <div className="text-sm text-muted-foreground">Reels</div>
+                      <div className="text-2xl font-bold text-primary">{pkg.reels}</div>
+                      <div className="text-xs text-muted-foreground">Reels</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{pkg.posts}</div>
-                      <div className="text-sm text-muted-foreground">Posts</div>
+                      <div className="text-2xl font-bold text-primary">{pkg.posts}</div>
+                      <div className="text-xs text-muted-foreground">Posts</div>
                     </div>
+                    {pkg.stories && (
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-primary">{pkg.stories}</div>
+                        <div className="text-xs text-muted-foreground">Stories</div>
+                      </div>
+                    )}
                   </div>
                 </CardHeader>
                 
@@ -276,8 +329,77 @@ const Orcamento = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contract & Payment Info */}
       <section className="py-16 px-4 bg-primary/5">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+            Informações Importantes
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Contract Terms */}
+            <Card className="border-primary/20 bg-card/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-foreground">
+                  <FileText className="w-6 h-6 text-primary" />
+                  Termos de Contrato
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">Contrato mínimo:</span> 3 meses
+                  </p>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                  <Gift className="w-6 h-6 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground">Bônus Contrato Anual!</p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Contrato de 1 ano ganha uma <span className="text-primary font-semibold">Landing Page</span> + <span className="text-primary font-semibold">Domínio grátis por 1 ano</span>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Payment Options */}
+            <Card className="border-primary/20 bg-card/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-foreground">
+                  <CreditCard className="w-6 h-6 text-primary" />
+                  Formas de Pagamento
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <p className="font-semibold text-foreground mb-2">Opção 1 - Pagamento Integral</p>
+                  <p className="text-sm text-muted-foreground">
+                    Pagamento no primeiro dia de contrato
+                  </p>
+                </div>
+                <div className="p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <p className="font-semibold text-foreground mb-2">Opção 2 - Pagamento Parcelado</p>
+                  <p className="text-sm text-muted-foreground">
+                    2x no mês: primeira parte no início do mês e segunda parte após 15 dias
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Negotiation Note */}
+          <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-purple-500/10 rounded-xl border border-primary/20 text-center">
+            <p className="text-lg text-foreground">
+              💬 Para <span className="font-semibold text-primary">melhorar, acrescentar ou retirar</span> qualquer material, vamos negociar!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Tem dúvidas sobre qual pacote escolher?
