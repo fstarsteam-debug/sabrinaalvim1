@@ -10,8 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      
+    steps:      
 uses: actions/checkout@v4
 name: FTP Deploy Locaweb
     uses: locaweb/ftp-deploy@1.0.0
