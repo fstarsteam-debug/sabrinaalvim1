@@ -12,6 +12,7 @@ import Embalagem from "./pages/Embalagem";
 import Impressos from "./pages/Impressos";
 import Branding from "./pages/Branding";
 import TrafegoPago from "./pages/TrafegoPago";
+import Orcamento from "./pages/Orcamento";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/impressos" element={<Impressos />} />
           <Route path="/branding" element={<Branding />} />
           <Route path="/trafego-pago" element={<TrafegoPago />} />
+          <Route path="/orcamento" element={<Orcamento />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
