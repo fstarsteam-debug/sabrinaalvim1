@@ -19,7 +19,7 @@ jobs:
     
 uses: actions/checkout@v4
 
-      with:
+    with:
 
         fetch-depth: 2
 
@@ -36,7 +36,7 @@ name: FTP-Deploy to Locaweb
 
         password: ${{ secrets.PASS }}
 
-        server-dir: public_html/
+        server-dir: public/
 
         local-dir: html-version/ 
 
